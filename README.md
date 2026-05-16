@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نموذج التسجيل</title>
+    <title>نموذج تسجيل البيانات</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,7 +35,6 @@
         }
         input[type="text"],
         input[type="email"],
-        input[type="password"],
         input[type="number"],
         input[type="url"],
         select,
@@ -68,77 +67,60 @@
 <div class="form-container">
     <h2>نموذج تسجيل البيانات</h2>
     
-    <!-- تم ربط النموذج برابط Formspree الخاص بكِ مباشرة -->
     <form action="https://formspree.io/f/mqenrgba" method="POST">
         
-        <!-- الاسم الكامل -->
         <div class="form-group">
             <label for="fullname">الاسم الكامل:</label>
-            <input type="text" id="fullname" name="الاسم الكامل" required placeholder="أدخل الاسم الثلاثي أو الرباعي">
+            <input type="text" id="fullname" name="Full_Name" required placeholder="أدخل الاسم الثلاثي أو الرباعي">
         </div>
 
-        <!-- البريد الإلكتروني -->
         <div class="form-group">
-            <label for="email">البريد الإلكتروني:</label>
-            <input type="email" id="email" name="البريد الإلكتروني" required placeholder="example@email.com">
+            <label for="email">البريد الإلكتروني للاتصال:</label>
+            <input type="email" id="email" name="Email_Address" required placeholder="example@email.com">
         </div>
 
-        <!-- كلمة المرور -->
-        <div class="form-group">
-            <label for="password">كلمة المرور:</label>
-            <input type="password" id="password" name="كلمة المرور" required placeholder="اختر كلمة مرور قوية للموقع">
-        </div>
-
-        <!-- رابط الصورة الشخصية أو الهوية -->
         <div class="form-group">
             <label for="image_url">رابط الصورة الشخصية أو الهوية (رابط مباشر):</label>
-            <input type="url" id="image_url" name="رابط الصورة الشخصية أو الهوية" placeholder="https://example.com/image.jpg">
+            <input type="url" id="image_url" name="Identity_Image_URL" placeholder="https://example.com/image.jpg">
         </div>
 
-        <!-- رقم الهوية / جواز السفر -->
         <div class="form-group">
             <label for="id_number">رقم الهوية / جواز السفر:</label>
-            <input type="number" id="id_number" name="رقم الهوية أو جواز السفر" required placeholder="أدخل الرقم الوطني أو رقم الجواز">
+            <input type="number" id="id_number" name="ID_or_Passport_Number" required placeholder="أدخل الرقم الوطني أو رقم الجواز">
         </div>
 
-        <!-- رقم الهاتف الرئيسي -->
         <div class="form-group">
             <label for="main_phone">رقم الهاتف الرئيسي:</label>
-            <input type="number" id="main_phone" name="رقم الهاتف الرئيسي" required placeholder="05xxxxxxxx">
+            <input type="number" id="main_phone" name="Primary_Phone" required placeholder="05xxxxxxxx">
         </div>
 
-        <!-- رقم هاتف بديل / واتساب -->
         <div class="form-group">
             <label for="alt_phone">رقم هاتف بديل / واتساب:</label>
-            <input type="number" id="alt_phone" name="رقم هاتف بديل أو واتساب" placeholder="05xxxxxxxx">
+            <input type="number" id="alt_phone" name="Whatsapp_Phone" placeholder="05xxxxxxxx">
         </div>
 
-        <!-- مكان الإقامة الحالي / العنوان بالتفصيل -->
         <div class="form-group">
             <label for="address">مكان الإقامة الحالي / العنوان الحالي بالتفصيل:</label>
-            <textarea id="address" name="العنوان الحالي بالتفصيل" rows="3" required placeholder="المدينة، الحي، الشارع، المعالم القريبة..."></textarea>
+            <textarea id="address" name="Detailed_Address" rows="3" required placeholder="المدينة، الحي، الشارع، المعالم القريبة..."></textarea>
         </div>
 
-        <!-- عدد أفراد الأسرة -->
         <div class="form-group">
             <label for="family_members">عدد أفراد الأسرة:</label>
-            <input type="number" id="family_members" name="عدد أفراد الأسرة" min="1" required placeholder="أدخل عدد الأفراد">
+            <input type="number" id="family_members" name="Family_Members_Count" min="1" required placeholder="أدخل عدد الأفراد">
         </div>
 
-        <!-- حالة الأسرة -->
         <div class="form-group">
             <label for="family_status">حالة الأسرة:</label>
-            <select id="family_status" name="حالة الأسرة" required>
+            <select id="family_status" name="Family_Condition" required>
                 <option value="" disabled selected>اختر الحالة من القائمة...</option>
                 <option value="نازح">نازح</option>
                 <option value="أسرة شهيد">أسرة شهيد</option>
                 <option value="حالة مرضية">حالة مرضية</option>
                 <option value="تعطل عن العمل">تعطل عن العمل</option>
-                <option value="أخرى">أخرى / وضع مستقر</option>
+                <option value="أخرى">وضع مستقر / أخرى</option>
             </select>
         </div>
 
-        <!-- زر الإرسال -->
         <button type="submit">إرسال البيانات</button>
         
     </form>
